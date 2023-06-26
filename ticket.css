@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ticket_container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  background: #303d34;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+input[type="text"] {
+  padding: 7px;
+  border-radius: 4px;
+  border: 1px solid #e08a8a;
+  background: #252b27;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+}
+
+.inputfield {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.load.active {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 10;
+  background: #ffffff46;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+}
+
+.load.active .circle {
+  width: 50px;
+  height: 50px;
+  border: 50px;
+  background: #ffffff6e;
+  border-radius: 50%;
+  border: 10px solid #414743;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  animation: spin 0.9s ease infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+input[type="submit"] {
+  padding: 7px 15px;
+  border-radius: 5px;
+  border: none;
+  text-transform: capitalize;
+  background: #44883b;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="submit"]:disabled {
+  background: #abe4a4;
+  color: #252b27;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 425px) {
+  h1 {
+    font-size: 25px;
+  }
+}
